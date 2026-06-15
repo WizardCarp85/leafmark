@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme" : "leafmarklink",
     "name": "leafmark",
     "slug": "leafmark",
     "version": "1.0.0",

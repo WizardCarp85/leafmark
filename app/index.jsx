@@ -3,23 +3,31 @@ import { Link } from 'expo-router'
 import React from "react";
 import Logo from '../assets/logo.png'
 
+// themed components
+import ThemedView from "../components/ThemedView";
+import Spacer from "../components/Spacer";
+import ThemedText from "../components/ThemedText";
+
 const Home = () => {
   return (
-    <View style={styles.container}>
+    <ThemedView style={[styles.container]}>
       <Image source={Logo} style={{ marginBottom: 10, width: 150, height: 150, borderRadius: 15}}/>
+      <Spacer />
 
-      <Text style={styles.title}>
-        Leafmark
-      </Text>
+      <ThemedText style={styles.title} title={true}>Leafmark</ThemedText>
 
-      <Text style={{ marginTop: 10, marginBottom: 30 }}>
+      <ThemedText style={{ marginTop: 10, marginBottom: 30 }}>
         A Reading List App
-      </Text>
+      </ThemedText>
 
-      <Link href="/about" style={styles.link}>About Page</Link>
-      <Link href="/contact" style={styles.link}>Contact Page</Link>
+      <Link href="/about" style={styles.link}>
+        <ThemedText>About Page</ThemedText>
+      </Link>
 
-    </View>
+      <Link href="/contact" style={styles.link}>
+        <ThemedText>Contact Page</ThemedText>
+      </Link>
+    </ThemedView>
   );
 };
 
@@ -27,7 +35,6 @@ export default Home;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#ededed",
     flex: 1,
     justifyContent: "center",
     alignItems: "center",

@@ -1,8 +1,9 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, useColorScheme, View } from 'react-native'
 import { Link } from 'expo-router'
 import React from 'react'
 
 const About = () => {
+
   return (
     <View style={styles.container}>
 
